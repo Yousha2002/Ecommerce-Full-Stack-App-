@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.admin-content-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  margin-top: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content.sidebar-open {
+  margin-left: 280px; /* Sidebar ki width ke equal */
+}
+
+.main-content.sidebar-closed {
+  margin-left: 80px; /* Collapsed sidebar ki width */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .main-content.sidebar-open,
+  .main-content.sidebar-closed {
+    margin-left: 0;
+  }
+}
+
+
+
+
+/* Custom dots styling */
+.slick-dots.custom-dots li button:before {
+  font-size: 12px;
+  color: #C9B59C;
+  opacity: 0.5;
+}
+
+.slick-dots.custom-dots li.slick-active button:before {
+  opacity: 1;
+  color: #C9B59C;
+}
+
+/* Slider container padding */
+.slick-slider {
+  margin: 0 -8px;
+}
+
+.slick-list {
+  padding: 10px 0 !important;
+}
+
+/* Product card hover effects */
+.slick-slide > div {
+  padding: 0 8px;
+}
